@@ -18,8 +18,9 @@ const app = express()
 app.use(express.json())
 app.use(
   cors({
-    origin: ["http://localhost:5173", "test-versal-fe.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE"] // optional
+    origin: ["http://localhost:5173", "https://test-versal-fe.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"], // optional
+    credentials: true
   })
 )
 
