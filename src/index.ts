@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://test-versal-fe.vercel.app"],
-    methods: ["GET", "POST", "PUT", "DELETE","OPTIONS","PATCH"], // optional
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"], // optional
     credentials: true
   })
 )
@@ -59,9 +59,13 @@ mongoose
     process.exit(1)
   })
 
+app.options('*', cors())
+
 app.listen(PORT, () => {
   console.log("Server is running")
 })
+
+export default app
 
 // --------------------------------------
 // // Built in middlewares (Global)
