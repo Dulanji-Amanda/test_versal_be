@@ -31,7 +31,7 @@ app.use("/api/v1/ai", aiRouter)
 // sample route with auth
 
 app.get("/", (_req, res) => {
-  res.send("Welcome to Smart Blog API")
+  res.send("Welcome to DevSphere API")
 })
 
 // public
